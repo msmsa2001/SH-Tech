@@ -113,14 +113,14 @@ section {
 
 .section-header {
   text-align: center;
-  padding-bottom: 60px;
+  padding-bottom: 20px;
 }
 
 .section-header h2 {
   font-size: 32px;
   font-weight: 600;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
   position: relative;
 }
 
@@ -143,7 +143,13 @@ section {
   color: #6f6f6f;
   font-weight: 600;
 }
+.icon-box{
+  transition: 2s;
 
+}
+.icon-box:hover{
+transform: scale(1.03);
+}
 /*--------------------------------------------------------------
 # Breadcrumbs
 --------------------------------------------------------------*/
@@ -375,14 +381,17 @@ section {
   scroll-margin-top: 70px;
 }
 .material-symbols-outlined{
-  font-size: 90px;
+  font-size: 70px;
   background: #effbff;
-  padding: 1.5rem;
+  padding: 0.5rem;
   border-radius: 50%;
   color: #8e8888;
   margin-bottom: 20px !important;
 }
-
+.services .service-box h3{
+  font-size: 22px;
+  font-weight: 600;
+}
 /*--------------------------------------------------------------
 # Desktop Navigation
 --------------------------------------------------------------*/
@@ -510,20 +519,22 @@ section {
     padding: 60px 6rem !important;
     gap: 30px;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     background-color: ghostwhite;
   }
 
   .services .service-box {
     box-sizing: border-box;
     box-shadow: 0 0 2px gainsboro;
-    height: 540px;
+    height:auto;
     border-radius: 10px;
     background-color: white;
     /* box-shadow: 0 0 2px rgba(0, 0, 0, 0.5); */
     transform: translateX(5px);
     padding: 19px;
     border-radius: 10px;
+    transition: 1s;
+    padding-bottom: 3rem;
   }
 
   /* .services .service-box .line {
@@ -532,22 +543,27 @@ section {
     width: 80%;
     border-radius: 10px;
   } */
+ 
 
   .services .service-box .icon {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 
   }
 
   .services .service-box a {
     position: absolute;
-    bottom: 30px;
+    bottom: 0.4rem;
+  }
+  .services .service-box p{
+    font-size: 15px;
   }
 
   .services .service-box:hover {
-    box-shadow: 0 0 6px grey;
+    box-shadow: 0 0 3px rgb(172, 165, 165);
+    transform: scale(1.01);
   }
 
   .services .service-box:hover a {
@@ -774,7 +790,7 @@ section {
   }
 
   .mobile-nav-hide {
-    color: #fff;
+    color: #322e2e;
     font-size: 32px;
     cursor: pointer;
     line-height: 0;
@@ -1298,7 +1314,21 @@ stimonials .testimonial-wrap {
 }
 
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: var(--color-primary);
+  /* background-color: var(--color-primary); */
+  background-color: rgb(73, 70, 70);
+}
+.testimonial-wrap {
+  display: flex;
+  align-items: stretch;
+}
+
+.testimonial-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 4rem;
+  box-sizing: border-box;
 }
 
 @media (max-width: 769px) {
@@ -1449,7 +1479,7 @@ h1 .service-line {
 }
 .services {
   display: grid;
-  grid-template-columns: 350px;
+  /* grid-template-columns: 350px; */
   gap: 30px;
   justify-content: center;
   align-items: center;
@@ -1581,7 +1611,11 @@ h1 .service-line {
   background-color: rgba(0, 0, 0, 0.6);
 }
 }
-
+@media screen and (max-width:450px) {
+  .services .service-box{
+    width: 310px !important;
+  }
+}
 @media (max-width : 425px){ 
 
   h1 .service-line{
@@ -1596,6 +1630,7 @@ h1 .service-line {
   overflow-y: auto;
   transition: 0.3s;
   z-index: 9998;
+  list-style: none;
 }
 .welcome {
   width: 370px;
@@ -1663,7 +1698,7 @@ margin-left: 40px;
 @media (max-width:850px) {
   .services {
     display: grid;
-    grid-template-columns: 300px;
+    /* grid-template-columns: 300px; */
     gap: 30px;
     justify-content: center;
     align-items: center;
@@ -1675,13 +1710,15 @@ margin-left: 40px;
   .services .service-box {
     box-sizing: border-box;
     box-shadow: 0 0 2px gainsboro;
-    height: 540px;
+    height: auto;
+    width: 400px;
     border-radius: 10px;
     background-color: white;
     transform: translateX(5px);
     padding: 19px 2.5rem;
     border-radius: 10px;
-    margin-left: -10px;
+    margin: auto;
+    /* margin-left: -10px; */
   }
   .services .service-box .icon {
     /* display: flex;
@@ -1715,6 +1752,8 @@ margin-left: 40px;
   .portfolio-details .swiper-button-next {
     display: none;
   }
+  .section-header p {
+    margin-bottom: 2rem;}
 }
 
 .portfolio-details .portfolio-info h3 {
@@ -2371,7 +2410,7 @@ margin-left: 40px;
 .hero p {
   color: rgba(255, 255, 255, 0.6);
   font-weight: 400;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .hero .btn-get-started {
@@ -2465,7 +2504,10 @@ h1 .service-line {
   margin-bottom: 15px;
   font-size: 24px;
 }
-
+.hero .icon-box .title div {
+  color: #fff;
+  transition: 0.3s;
+}
 .hero .icon-box .title a {
   color: #fff;
   transition: 0.3s;
