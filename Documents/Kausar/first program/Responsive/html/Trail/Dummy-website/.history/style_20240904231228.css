@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    background: var(--background-color);
+}
+
+:root{
+    --background-color:#F9F4FB;
+    --Title:38px;
+    --para:18px
+}
+/* home section started */
+.Home-section{
+
+}
+.Home-section .home-inner-sec{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4rem;
+}
+.Home-section .home-inner-sec .section-1{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+.Home-section .home-inner-sec .section-1 h1{
+    
+}

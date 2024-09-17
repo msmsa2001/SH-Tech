@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    background: var(--background-color);
+    font-family: 'Poppins';
+}
+
+:root{
+    --background-color-1:#F9F4FB;
+    --background-color-2:#E884C4;
+    --background-color-3:#BA71FF;
+    --Title-color:#3F374E;
+    --TitleSize:38px;
+    --paraSize:18px;
+    --para-small-size:14px;
+}
+/* home section started */
+.Home-section{
+
+}
+.Home-section .home-inner-sec{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 0 7rem 0 10rem;
+}
+.Home-section .home-inner-sec .section-1{
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+}
+.Home-section .home-inner-sec .section-1 h1{
+    font-size: var(--TitleSize);
+    color: var(--Title-color);
+    letter-spacing: .50px;
+    font-weight: 700;
+}
+.Home-section .home-inner-sec .section-1 p{
+    font-size: var(--paraSize);
+    color: var(--Title-color);
+}
+.Home-section .home-inner-sec .section-1 .button-section{
+    display: flex;
+    gap: 12px;
+}
+.Home-section .home-inner-sec .section-1 .button-section button{
+background: linear-gradient(to right bottom, var(--background-color-3),var(--background-color-2));
+border: none;
+padding: 12px 20px;
+cursor: pointer;
+color: #fff;
+width: 150px;
+font-size: var(--para-small-size);
+border-radius: 2px;
+}
